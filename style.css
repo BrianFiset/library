@@ -1,0 +1,36 @@
+html {
+    height: 100%;
+}
+
+.modal-container {
+    display: grid;
+}
+
+.form-container {
+    display: grid;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 300px;
+    width: 250px;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: aqua;
+    gap: 1rem;
+}
+
+.form-container > input {
+    font-size: 1.3rem;
+    border-radius: 0.5rem;
+    border-style: none;
+    width: 100%;
+}
+
+.form-title {
+    font-size: 1.5rem;
+}
+
+.hidden {
+    visibility: hidden;
+}
