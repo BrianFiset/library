@@ -2,8 +2,51 @@ html {
     height: 100%;
 }
 
-.modal-container {
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
     display: grid;
+    grid-template-rows: 10% auto 5%;
+    height: 100%;
+    background-color: aliceblue;
+}
+
+header {
+    display: grid;
+    background-color: lightblue;
+    text-align: center;
+    align-items: center;
+}
+
+header div {
+    font-size: 3rem;
+
+}
+
+main {
+    background-color: aliceblue;
+}
+
+.footer {
+    background-color: lightblue;
+    height: 100%;
+}
+
+.modal-container {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0,0 , 0, 0.3);
+    animation-name: modalopen;
+    animation-duration: 0.75s;
 }
 
 .form-container {
@@ -16,21 +59,110 @@ html {
     width: 250px;
     padding: 1rem;
     border-radius: 0.5rem;
-    background-color: aqua;
     gap: 1rem;
+    background-color: lightblue;
+    box-shadow: 0 5px 8px 0 rgba(0,0 , 0, 0.4), 0 7px 20px 0 rgba(0,0 , 0, 0.4);
 }
 
 .form-container > input {
     font-size: 1.3rem;
     border-radius: 0.5rem;
     border-style: none;
-    width: 100%;
+    width: 95%;
+    padding-left: 0.5rem;
 }
 
 .form-title {
     font-size: 1.5rem;
+    align-self: center;
 }
 
 .hidden {
-    visibility: hidden;
+    display: none;
+}
+
+.modal-top {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.close-btn {
+    font-size: 30px;
+    justify-self: end;
+    color: gray;
+    max-height: 30px;
+}
+
+.close-btn:hover , .close-btn:focus{
+    color: black;
+    cursor: pointer;
+}
+
+@keyframes modalopen {
+    from{ opacity: 0;}
+    to { opacity: 1;}
+}
+
+.book-container {
+    display: grid;
+    gap: 4rem;
+    padding: 0 0 2rem 2rem;
+    grid-template-rows: repeat(auto-fit, 300px);
+    grid-template-columns: repeat(auto-fit, 240px);
+    overflow: auto;
+    margin: 1rem 0;
+}
+
+.books {
+    display: grid;
+    background-color: pink;
+    height: 300px;
+    border-radius: 1rem;
+    padding: 1rem 1.5rem 0 1.5rem;
+    align-items: center;
+}
+
+.books div:nth-child(1) {
+    display: grid;
+    font-size: 24px;
+    text-align: center;
+    grid-template-columns: 1fr auto;
+    height: 100%;
+    align-items: center;
+}
+
+.books > div:nth-child(1) > div:nth-child(2){
+    align-self: start;
+    font-size: 32px;
+}
+
+.books > div:nth-child(1) > div:nth-child(2):hover{
+    color: gray;
+    cursor: pointer;
+}
+
+.button-container {
+    display: flex;
+    justify-content: end;
+    padding: 1rem 1rem 1rem 0;
+}
+
+#add-book-btn {
+    padding: 1rem 2rem;
+    background-color: lightblue;
+    border-style: none;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.books button {
+    padding: 1rem 2rem;
+    background-color: lightblue;
+    border-style: none;
+    border-radius: 1rem;
+}
+
+.books button:hover,
+.books button:active {
+    background-color: rgb(137, 183, 197);
 }
