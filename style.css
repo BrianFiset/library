@@ -115,7 +115,7 @@ main {
 
 .books {
     display: grid;
-    background-color: pink;
+    background-color: lightgrey;
     height: 300px;
     border-radius: 1rem;
     padding: 1rem 1.5rem 0 1.5rem;
